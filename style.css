@@ -1,0 +1,171 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .container{
+    width: 80%;
+    padding: 1rem;
+    border:1px solid black;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  form{
+    position:absolute;
+    left:10px;
+    top:10px;
+    background-color: rgb(197, 197, 197);
+    width: 400px;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    transition: background-color 0.3s, border 0.3s;
+  }
+
+  form * {
+    width: 100%;
+    display: block;
+    padding: 1rem 2.5rem;
+  }
+
+  form button{
+    cursor: pointer;
+  }
+
+  form input{
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    font-family: inherit;
+  }
+
+  form input:focus {
+    outline: 3px solid #9999FF;
+    background: #fff;
+    color: #000;
+  }
+
+  .drag{
+    cursor: grab;
+    background-color: #ffcccc;
+    border: 2px dashed #000;
+  }
+
+  dialog::backdrop {
+    backdrop-filter: blur(3px);
+}
+
+  .emergentes{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    line-height: 2rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #customDialogError{  
+    width: 300px;
+    min-height: 200px;
+    background: rgb(189, 19, 19);
+    color: #fff;   
+  }
+
+  #customDialogError #close-button, #customDialogConfirm #close-button-confirm{
+    position: absolute;
+    right: 10px;
+    top:10px;
+    cursor: pointer;
+    font-size: 2rem;
+  } 
+
+  #customDialogConfirm{
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: #fff;
+    flex-direction: column;
+  }
+
+  #customDialogConfirm p{
+    padding-top: 3rem;
+  }
+
+  #customDialogConfirm .fa-exclamation{
+    color: orange;
+    font-size: 2rem;
+    border:2px solid orange;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  #customDialogConfirm div:nth-of-type(1){
+    padding: 1rem 0;
+  }
+
+  #customDialogConfirm .buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  #customDialogConfirm .buttons button{
+    margin: 1rem 0;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1rem 2rem;
+  }
+
+  #customDialogConfirm .buttons button:hover{
+    opacity: 0.7;
+  }
+
+  #customDialogConfirm .buttons button:nth-child(1){
+    background-color: rgb(20, 172, 99)
+  }
+
+  
+  #customDialogConfirm .buttons button:nth-child(2){
+    background-color: rgb(243, 27, 56)
+  }
+
+  #peopleList{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #peopleList div{
+    width: 48%;
+    background:#9999FF;
+    text-align: center;
+    color: #fff;
+    padding: 1rem 0;
+    border: 2px solid #fff;
+    font-weight: bold;
+  }
+
+  #peopleList i{
+    width: 2%;
+    background:#9999FF;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 250%;
+    cursor: pointer;
+  }

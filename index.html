@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Listado de personas</h1>
+
+    <div id="peopleList"></div>
+
+    <form id="personForm" class="draggable">
+        <input type="text" id="nameInput" placeholder="Ingresa el nombre">    
+        <input type="text" id="ageInput"  placeholder="Ingresa la edad">    
+        <button type="submit" id="addPersonButton">Agregar Persona</button>
+    </form>
+
+    <dialog id="customDialogError" class="emergentes">
+      <i id="close-button" class="fa-solid fa-xmark"></i>
+      <div id="dialogMessage">
+          <p></p>
+      </div> 
+    </dialog>
+
+    <dialog id="customDialogConfirm" class="emergentes">
+      <i id="close-button-confirm" class="fa-solid fa-xmark"></i>
+      <p>¿Estás seguro de que quieres borrar esto?</p>
+      <div class="buttons">
+          <button id="accept">Aceptar <i class="fa-solid fa-trash"></i></button>
+          <button id="cancel">Cancelar</button>
+      </div> 
+    </dialog>
+
+  </div>
+   <script src="app.js"></script>
+
+</body>
+</html>
