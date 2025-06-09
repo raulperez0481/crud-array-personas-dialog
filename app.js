@@ -52,6 +52,8 @@ function addPerson(event) {
 
         //llamo a la funcion de pintar las personas
         displayPeople();
+        //muestro un mensaje de éxito
+        showToast('Persona agregada correctamente');
     } 
     catch (error) {
         //console.error se muestra acompañados de un icono de error.
@@ -126,7 +128,7 @@ function showDialogDeletePerson(index) {
       dialogConfirm.close();
       dialogConfirm.style.removeProperty('display'); // Elimina la propiedad display
     });      
-  }
+}
 
 function deletePerson(index){
   console.log('El índice del elemento cuando se borra es: ', index);
@@ -209,4 +211,15 @@ function stopMove() {
   draggable.style.cursor = 'grab';
   draggable.classList.remove('dragging');
   draggable.classList.add('drag');
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+            
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+    
 }

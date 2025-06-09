@@ -169,3 +169,23 @@
     line-height: 250%;
     cursor: pointer;
   }
+
+#toast {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: top 0.5s ease, opacity 0.5s ease; 
+}
+        
+#toast.show {
+    top: 20px;
+    opacity: 1;
+}
