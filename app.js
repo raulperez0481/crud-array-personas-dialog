@@ -122,7 +122,7 @@ function showDialogDeletePerson(index) {
         dialogConfirm.style.removeProperty('display'); // Elimina la propiedad display
     });
 
-    buttonAccept.addEventListener('click', deletePerson(index));
+   buttonAccept.addEventListener('click', () => deletePerson(index));
 
     buttonCancel.addEventListener('click', () => {
       dialogConfirm.close();
