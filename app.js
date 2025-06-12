@@ -161,38 +161,3 @@ function showToast(message) {
         toast.classList.remove('show');
     }, 3000);
 }
-
-// Drag & Drop para el formulario
-let offsetX, offsetY;
-
-draggable.addEventListener('mouseenter', () => {
-    draggable.classList.add('drag');
-});
-
-draggable.addEventListener('mouseleave', () => {
-    if (!draggable.classList.contains('dragging')) {
-        draggable.classList.remove('drag');
-    }
-});
-
-draggable.addEventListener('mousedown', (e) => {
-    offsetX = e.clientX - draggable.getBoundingClientRect().left;
-    offsetY = e.clientY - draggable.getBoundingClientRect().top;
-    draggable.style.cursor = 'grabbing';
-    draggable.classList.add('dragging');
-    document.addEventListener('mousemove', move);
-    document.addEventListener('mouseup', stopMove);
-});
-
-function move(e) {
-    draggable.style.left = `${e.clientX - offsetX}px`;
-    draggable.style.top = `${e.clientY - offsetY}px`;
-}
-
-function stopMove() {
-    document.removeEventListener('mousemove', move);
-    document.removeEventListener('mouseup', stopMove);
-    draggable.style.cursor = 'grab';
-    draggable.classList.remove('dragging');
-    draggable.classList.add('drag');
-}
