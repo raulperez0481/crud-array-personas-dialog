@@ -5,10 +5,19 @@
     box-sizing: border-box;
   }
 
+  html{
+    font-size: 62.5%;
+  }
+
   body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    font-size: 1.6rem;
+  }
+
+  body.login-body{
+    align-items: center;
   }
 
   .container{
@@ -21,7 +30,82 @@
     text-align: center;
   }
 
-  form{
+  #loginForm{
+    max-width: 375px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 3rem 5rem -2rem rgba(0, 0, 0, 0.2);
+    min-height: 300px;
+    position: relative;
+    padding:2rem;
+  }
+
+  #loginForm div{
+      position: relative;
+      padding-top: 2.6rem;
+  }
+
+  #loginForm input {
+      width: 100%;
+      display: block;
+      padding: 1rem 2.5rem;
+      margin-top: .4rem;
+  }
+
+  #loginForm input:focus{
+      border: 2px solid #9999FF;
+      outline: none;
+  }
+
+  #loginForm button {
+      display: inline-block;
+      padding: 1.1rem 1.4rem;
+      background-color: #000;
+      color: white;
+      border: none;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: bold;
+      margin-top: .4rem;
+  }
+
+  #loginForm i.eye{
+    position: absolute;
+    right: 1px;
+    top: 54px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+  }
+
+
+  #loginForm #errorMessage{
+    color: red;
+    text-align: center;
+  }
+
+  .error {
+    border: 2px solid red;
+  }
+
+
+  .error-message {
+    color: red;
+    position: absolute; /* Hacemos los mensajes de error absolutos */
+    bottom: -1.5rem; /* Los colocamos debajo del input */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+
+  #personForm{
     position:absolute;
     left:10px;
     top:10px;
@@ -32,17 +116,17 @@
     transition: background-color 0.3s, border 0.3s;
   }
 
-  form * {
+  #personForm * {
     width: 100%;
     display: block;
     padding: 1rem 2.5rem;
   }
 
-  form button{
+  #personForm button{
     cursor: pointer;
   }
 
-  form input{
+  #personForm input{
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 2.5rem;
     background: rgba(255, 255, 255, 0.1);
@@ -50,7 +134,7 @@
     font-family: inherit;
   }
 
-  form input:focus {
+  #personForm input:focus {
     outline: 3px solid #9999FF;
     background: #fff;
     color: #000;
